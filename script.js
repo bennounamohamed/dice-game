@@ -41,18 +41,14 @@ holdBtn.addEventListener('click', () => {
   if (switchPlayer === 0) {
     playerTwoContainer.classList.add('player--active');
     playerOneContainer.classList.remove('player--active');
-    score = randomNum;
     playerOne += score;
-    randomNum = 0;
     playerOneScore.textContent = playerOne;
     currentScore2.textContent = 0;
     switchPlayer = 1;
   } else {
     playerOneContainer.classList.add('player--active');
     playerTwoContainer.classList.remove('player--active');
-    score = randomNum;
     playerTwo += score;
-    randomNum = 0;
     currentScore1.textContent = 0;
     playerTwoScore.textContent = playerTwo;
     switchPlayer = 0;
