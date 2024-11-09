@@ -27,36 +27,13 @@ dice.classList.add('hidden');
 rollDice.addEventListener('click', () => {
   randomNum = Math.floor(Math.random() * 6 + 1);
   score = randomNum;
+  dice.src = `dice-${randomNum}.png`;
+  dice.classList.remove('hidden');
+
   if (currentScore1.textContent == 0) {
     currentScore1.textContent = score;
   } else if (currentScore2.textContent == 0) {
     currentScore2.textContent = score;
-  }
-
-  if (randomNum === 1) {
-    score += randomNum;
-    dice.src = 'dice-1.png';
-    dice.classList.remove('hidden');
-  } else if (randomNum === 2) {
-    score += randomNum;
-    dice.src = 'dice-2.png';
-    dice.classList.remove('hidden');
-  } else if (randomNum === 3) {
-    score += randomNum;
-    dice.src = 'dice-3.png';
-    dice.classList.remove('hidden');
-  } else if (randomNum === 4) {
-    score += randomNum;
-    dice.src = 'dice-4.png';
-    dice.classList.remove('hidden');
-  } else if (randomNum === 5) {
-    score += randomNum;
-    dice.src = 'dice-5.png';
-    dice.classList.remove('hidden');
-  } else if (randomNum === 6) {
-    score += randomNum;
-    dice.src = 'dice-6.png';
-    dice.classList.remove('hidden');
   }
 });
 
@@ -90,4 +67,5 @@ newGame.addEventListener('click', () => {
   currentScore1.textContent = 0;
   currentScore2.textContent = 0;
   playerOne = 0;
+  playerTwo = 0;
 });
